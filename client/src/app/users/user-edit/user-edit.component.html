@@ -1,0 +1,73 @@
+<section class="container" fxLayout="column" fxLayoutAlign="center center">
+    <h1>Edit User</h1>
+    <form class="edit-user-form" fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center" #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <mat-form-field appearance="outline">
+             <input 
+                [value]="user?.firstName"
+                 matInput 
+                 type="text" 
+                 name="firstName" 
+                 required 
+                 placeholder="First Name" 
+                 [(ngModel)] = "user.firstName"
+                 #nameInput="ngModel">
+            <mat-label>First Name</mat-label>
+            <mat-error *ngIf="nameInput.hasError('required')">field must not be empty</mat-error>
+        </mat-form-field> 
+ 
+        <mat-form-field appearance="outline">
+            <input 
+               [value]="user?.lastName"
+                matInput 
+                type="text" 
+                name="lastName" 
+                required 
+                placeholder="Last Name" 
+                [(ngModel)] = "user.lastName"
+                #nameInput="ngModel">
+           <mat-label>Last Name</mat-label>
+           <mat-error *ngIf="nameInput.hasError('required')">field must not be empty</mat-error>
+       </mat-form-field> 
+ 
+       <mat-form-field appearance="outline">
+        <input 
+           [value]="user?.email"
+            matInput 
+            type="email" 
+            name="email" 
+            required 
+            placeholder="Email" 
+            [(ngModel)] = "user.email"
+            #nameInput="ngModel">
+       <mat-label>Email</mat-label>
+       <mat-error *ngIf="nameInput.hasError('required')">field must not be empty</mat-error>
+      </mat-form-field> 
+
+      <mat-form-field appearance="outline">
+        <input 
+           [value]="user?.mobile"
+            matInput 
+            type="text" 
+            name="mobile" 
+            required 
+            placeholder="Phone Number" 
+            [(ngModel)] = "user.mobile"
+            #nameInput="ngModel">
+       <mat-label>Phone Number</mat-label>
+       <mat-error *ngIf="nameInput.hasError('required')">field must not be empty</mat-error>
+   </mat-form-field> 
+   <mat-form-field appearance="outline">
+    <input 
+       [value]="user?.imageUrl"
+        matInput 
+        type="text" 
+        name="imageUrl"  
+        placeholder="Image" 
+        [(ngModel)] = "user.imageUrl"
+        #nameInput="ngModel">
+   <mat-label>Image</mat-label>
+  </mat-form-field> 
+
+    <button type="submit" mat-raised-button color="primary" [disabled]="!f.dirty">Save</button>
+    </form>
+</section>

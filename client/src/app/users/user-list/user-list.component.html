@@ -1,0 +1,14 @@
+<!-- <section fxLayout="row wrap" fxLayout.xs="column wrap" fxLayoutAlign="center">
+    <div *ngFor="let user of users$ | async">
+        <app-user-ticket [user]="user"></app-user-ticket>
+    </div>
+</section> -->
+
+<!-- ------Virtual Scrolling----- -->
+<section class="container">
+    <cdk-virtual-scroll-viewport itemSize="400" class="viewport">
+        <div *cdkVirtualFor="let user of users$ | async">
+            <app-user-ticket [user]="user"></app-user-ticket>
+        </div>
+    </cdk-virtual-scroll-viewport>
+</section>

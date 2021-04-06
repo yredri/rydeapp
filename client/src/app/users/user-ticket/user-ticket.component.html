@@ -1,0 +1,19 @@
+<section fxLayout fxLayoutAlign="center">
+    <mat-card class="user-ticket">
+        <div class="header-image" fxLayout fxLayoutAlign="center">
+            <!-- <img mat-card-avatar src="{{user.imageUrl}}" alt="user image"> -->
+            <img mat-card-avatar src="{{user.imageUrl}}" alt="user image">
+        </div>
+        <mat-card-header fxLayout fxLayoutAlign="center">
+            <mat-card-title>{{user.firstName}} {{user.lastName}}</mat-card-title>
+        </mat-card-header>
+      <div mat-card-image></div>
+      <mat-card-content fxLayout="column" fxLayoutAlign="center center">
+        <div>Email: {{user.email}}</div>
+        <div>Phone: {{user.mobile}}</div>
+      </mat-card-content>
+      <mat-card-actions fxLayoutAlign="center">
+        <button class="action-btn" mat-raised-button [routerLink]="['user/edit/', user.id]">Edit</button>
+      </mat-card-actions>
+    </mat-card>
+</section>

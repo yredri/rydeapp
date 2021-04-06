@@ -1,0 +1,22 @@
+.user-ticket {
+    width: 600px;
+    height: 200px;
+    max-width: 600px;
+    margin: 10px;
+    box-shadow: 0 4px 8px #00000022;
+}
+
+.header-image {
+    img{
+        background-size: cover;
+        height:55px;
+        width:55px;
+    }
+}
+
+.action-btn {
+    background-color: #391975;
+    color: white;
+    cursor: pointer;
+    border-radius: 2em;
+}
